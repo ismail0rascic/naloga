@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+
 use Yii;
 
 /**
@@ -51,5 +52,10 @@ class TomProject extends \yii\db\ActiveRecord
     public function getTomTasks()
     {
         return $this->hasMany(TomTask::class, ['project_id' => 'id']);
+    }
+ 
+     public static function find()
+    {
+        return new ProgressQuery();
     }
 }

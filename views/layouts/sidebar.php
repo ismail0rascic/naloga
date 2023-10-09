@@ -25,10 +25,10 @@ AppAsset::register($this);
 
 <body>
     <?php $this->beginBody() ?>
-
     <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar collapse ">
+        <div class="row" style="height: 100vh;" >
+          
+        <nav id="sidebar" class="col-md-2 col-lg-2 d-md-block sidebar collapse border flex-column h-100 ">
                 <div class="position-sticky">
                     <div class="list-group list-group-flush mx-3 mt-4">
                         <div class="nav-item">
@@ -50,21 +50,20 @@ AppAsset::register($this);
                 </div>
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-8 px-md-4">
+            <main class="col-md-8 ms-sm-auto col-lg-8 px-md-4 border">
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2"><?= Html::encode($this->title) ?></h1>
                 </div>
                 <?= $content ?>
             </main>
 
-            <aside class="col-md-3 col-lg-2 d-md-block sidebar">
+            <aside class="col-md-2 col-lg-2 d-md-block sidebar border">
                 <div class="position-sticky">
-
+                    Third column
                 </div>
             </aside>
         </div>
     </div>
-
     <?php $this->endBody() ?>
 </body>
 
